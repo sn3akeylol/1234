@@ -1,0 +1,256 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(20deg, #dedcdb, #000 35%, #240400);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    animation: gradient 60s ease infinite;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    margin:0px;/*this is the best solution for weird gaps*/
+}
+
+
+.navbar {
+    list-style: none;
+    background-color: #c87272;
+    text-align: center;
+    padding: 15px;
+    display: absolute;
+    justify-content: center;
+    display: flex;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: aqua;
+    margin-left: 15px;
+    margin-right: 10px;
+    word-spacing: -6px;
+}
+
+
+.container {
+    width: auto;
+    border: 1px solid #b08484;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #a7a1a11a;
+    background-color: #a66767;
+    color: aqua;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.container:hover {
+    cursor: default;
+}
+
+
+.read-more-button {
+    background-color: #b08484;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    border: none;
+    position: absolute;
+    left: 50%;
+    bottom: 25vh;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.read-more-button:hover {
+    background-color: #d62828;
+}
+
+
+/* Position chapter3 */
+#chapter3 {
+    position: relative;
+    top: 100vh;
+    color: #9a0000;
+    width: 102%;
+    display: flex;
+    overflow-wrap: break-word;
+    text-align: justify;
+    word-spacing: 20px;
+    text-size-adjust: 4%;
+    z-index: 1; /* Add z-index to lift it above #chapter4 */
+}
+
+
+.chapter3_container {
+    padding: 5vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 2; /* Increase z-index */
+    flex-grow: 1;
+}
+
+
+/* Styling chapter3 */
+.about_content {
+    z-index: 3;
+    padding: 30vh;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+
+.about_bg img {
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+}
+
+
+.product_btn {
+    background-color: #6a00ff;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    border: none;
+    position: absolute;
+    left: 50%;
+    bottom: 25vh;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 4;
+    cursor: pointer;
+    text-decoration: none;
+    padding-left: 10px;
+    word-spacing: -2px;
+}
+
+
+#chapter4 {
+    position: relative;
+    background-color: #ff8000;
+    top: 96vh;
+    height: calc(auto+10%);
+   
+    z-index: 0; /* Set z-index to ensure it's below #chapter3 */
+}
+
+
+.card1 {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top:20px;
+    position: relative; /* Ensure relative positioning within #chapter4 */
+    z-index: 1; /* Set z-index to lift it above the background color of #chapter4 */
+}
+
+
+.card1 img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.card-content {
+    padding: 0px;
+}
+
+
+.card-content h3 {
+    margin-top: 10;
+    color: #333;
+}
+
+
+.card-content p {
+    color: #666;
+}
+
+
+.card2 {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top:0px;
+    position: static; /* Ensure relative positioning within #chapter4 */
+    z-index: 1; /* Set z-index to lift it above the background color of #chapter4 */
+}
+
+
+.card2 img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.card-content2 {
+    padding: 0px;
+}
+
+
+.card-content h3 {
+    margin-top: 10;
+    color: #333;
+}
+
+
+.card-content p {
+    color: #000;
+}
+
+
+#price{
+    font-style: oblique;
+    color: greenyellow;
+   
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+/*uh oh, time for responsive design for every device*/
+@media (max-width:720px) {
+    body{
+        font-size: 100%;
+        transform: scale(calc((2vh*1.005px)/0.993rem)*-3vw);/*i'm actually crazy good at math*/
+        max-width: fit-content;
+    }
+}
+
+
+
+
